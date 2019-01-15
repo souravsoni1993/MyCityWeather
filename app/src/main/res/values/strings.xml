@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyCityWeather</string>
+    <string name="day">Monday</string>
+    <string name="tempreture">20 C</string>
+    <string name="currentCity">Bangalore</string>
+    <string name="currentTempreture">20</string>
+    <string name="apiKey">95ad3f202dd24e9795965423191401</string>
+    <string name="noOfDays">4</string>
+</resources>

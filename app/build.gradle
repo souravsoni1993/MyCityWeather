@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "getgood.dogood.mycityweather"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+/**
+ * Define the library version for easy updating.
+ */
+
+def power_mock_version = "1.6.6"
+def mockito_version = "1.9.5"
+def junit_version = "4.12"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support.test:rules:1.0.2'
+
+    implementation 'com.google.code.gson:gson:2.6.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+
+    // Compile J-Unit test (for testing only)
+    testImplementation "junit:junit:${junit_version}"
+    testImplementation "org.mockito:mockito-core:${mockito_version}"
+    testImplementation "org.powermock:powermock-module-junit4:${power_mock_version}"
+    testImplementation "org.powermock:powermock-module-junit4-rule:${power_mock_version}"
+    testImplementation "org.powermock:powermock-api-mockito:${power_mock_version}"
+    testImplementation "org.powermock:powermock-classloading-xstream:${power_mock_version}"
+}
